@@ -73,17 +73,17 @@
     NSPoint point;  // Point that holds zone values in itself
     
     // Find out zone by X coordinate
-    if(BETWEEN(coords.x, 0, 100)){
+    if(BETWEEN(coords.x, 0, size.width/3.f)){
         point.x = 0;
     }
-    else if (BETWEEN(coords.x, 101, 200)){
+    else if (BETWEEN(coords.x, size.width/3.f, 2.f*size.width/3.f)){
         point.x = 1;
     }
-    else if(BETWEEN(coords.x, 201, 300)){
+    else if(BETWEEN(coords.x, 2.f*size.width/3.f, size.width)){
         point.x = 2;
     }
     // Find out zone by Y coordinate
-    if(BETWEEN(coords.y, 0, 110)){
+    if(BETWEEN(coords.y, 0, size.height/2.f)){
         point.y = 0;
     }
     else {
